@@ -1,0 +1,22 @@
+<h1>Elements of parents</h1>
+<div>
+  <h1>Enter the product details</h1>
+  Entering the product name: <input type="text" #pName /> Enter the qty:
+  <input type="text" #pQty />
+  <input
+    type="submit"
+    (click)="sendTheValuesToChild(pName.value, pQty.value)"
+  />
+</div>
+<p>Data received from Child</p>
+<div>
+  <p>
+    The user said <b> {{ interestOfCustomer }}</b> to the product
+  </p>
+</div>
+
+<app-child
+  [pName]="productName"
+  [pQty]="productQty"
+  (pdtEvent)="ReceiveInterestValue($event)"
+></app-child>

@@ -1,0 +1,17 @@
+<h1>Elements of Child</h1>
+<div>
+  <p>
+    The Product you have entered is {{ pName }} and the number of item is
+    {{ pQty }}
+  </p>
+</div>
+<p>Send the data to Parent</p>
+<div>
+  Are you interested in this product???Enter Yes or No :
+  <input type="text" #interest />
+  <input
+    type="submit"
+    value="Submit to Parent"
+    (click)="pdtEvent.emit(interest.value)"
+  />
+</div>

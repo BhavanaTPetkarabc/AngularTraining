@@ -1,0 +1,22 @@
+<br />
+<label>Current Address:</label>
+<br />
+<textarea
+  name="address"
+  rows="4"
+  cols="50"
+  [(ngModel)]="currentAddress"
+></textarea>
+<br />
+Is your Premanent address same as current address?
+
+<input class="checkboxInput" type="checkbox" (change)="isPermanent($event)" />
+<br />
+<label>Permanent Address:</label>
+<br />
+<textarea
+  name="address"
+  rows="4"
+  cols="50"
+  [(ngModel)]="permanentAddress"
+></textarea>

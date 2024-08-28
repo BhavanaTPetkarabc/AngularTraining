@@ -1,0 +1,16 @@
+<br />
+Do you have coupon?
+<input class="checkboxInput" type="checkbox" (click)="toggleDisplay()" />
+<section *ngIf="display">
+  <!--control the presence of the html tag-->
+  <label>Enter your coupan code to get the discount details</label>
+  <input type="text" [(ngModel)]="coupanCode" />
+  <button (click)="calculateDiscount()">Get Discount Detail</button>
+  <div>
+    <h3>Discount details</h3>
+    <p>
+      The entered coupan code is {{ coupanCode }} and the discount is
+      {{ discount }}
+    </p>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+<h1>Products</h1>
+<section
+  routerLink="/all/{{ d.id }}"
+  *ngFor="let d of productData?.products"
+  style="
+    display: inline-block;
+    border-radius: 2px;
+    border-bottom: black;
+    border-style: dashed;
+  "
+>
+  <img height="200px" width="150px" [src]="d.thumbnail" />
+  <p>Price: {{ d.price }}</p>
+  <p>Rating: {{ d.rating }}</p>
+</section>

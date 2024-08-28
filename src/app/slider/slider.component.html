@@ -1,0 +1,10 @@
+<section>
+  <img [src]="productData[index].thumbnail" height="200px" width="200px" />
+
+  <p [align]="alignment">Price: {{ productData[index].price }}</p>
+  <p [align]="alignment">Rating: {{ productData[index].rating }}</p>
+  <p [align]="alignment">
+    <button (click)="showPrevData()">&lt;</button
+    >&nbsp;&nbsp;&nbsp;&nbsp;<button (click)="showNextData()">&gt;</button>
+  </p>
+</section>

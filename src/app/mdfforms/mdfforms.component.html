@@ -1,0 +1,23 @@
+<h2>MDF - Sign In Form</h2>
+<form [formGroup]="frmSignIn" (ngSubmit)="sendValues()">
+  <label>Enter Email<span style="color: red">*</span> </label
+  ><input type="text" formControlName="uemail" name="txtEmail" /><br />
+  <span
+    *ngIf="!isFreshRequest &&  frmSignIn.controls['uemail']?.errors?.['required']"
+    style="color: red"
+    >Email is Mandatory</span
+  ><br />
+  <span
+    *ngIf="!isFreshRequest && frmSignIn.controls['uemail']?.errors?.['pattern']"
+    style="color: red"
+    >Email is not in the right format</span
+  ><br />
+  <label>Enter Password<span style="color: red">*</span> </label
+  ><input type="password" formControlName="upwd" name="txtPassword" /><br />
+  <span
+    *ngIf="!isFreshRequest && frmSignIn.controls['upwd']?.errors?.['required']"
+    style="color: red"
+    >Password is Mandatory</span
+  ><br />
+  <input type="submit" [disabled]="frmSignIn.invalid" />
+</form>
